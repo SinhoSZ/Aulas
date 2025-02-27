@@ -1,5 +1,9 @@
-CREATE TABLE: Cria uma nova tabela.
+# Guia de Comandos SQL
 
+## **Criação de Tabelas**
+**`CREATE TABLE`**: Cria uma nova tabela.
+
+```sql
 CREATE TABLE nome_da_tabela (
     coluna1     tipo_de_dados   restrições
     id          SERIAl          PRIMARY KEY,
@@ -15,39 +19,39 @@ DRP COLUMN:         Remove uma coluna
 ADD CONSTRAINT:     Adiciona uma restrição (ex: chave primária, chave estragengeira)
 DROP CONSTRAINT:    Remove uma restrição
 
-exemplo:
+Exemplo:
 
 ALTER TABLE clientes ADD COLUMN telefone VARCHAR(20);
 ALTER TABLE clientes ALTER COLUMN  nome TYPE VARCHA(100);
 
 DROP TABLE: Remove uma tabela
 
-exemplo:
+Exemplo:
 
 DROP TABLE nome_da_tabela;
 
 CREATE DATABASE: Cria um novo banco de dados.
 
-exemplo:
+Exemplo:
 
 CREATE DATABASE nome_do_novo_banco_de_dados;
 
 DROP DATABASE: Remove um banco de dados.
 
-exemplo:
+Exemplo:
 
 DROP DATABASE nome_do_banco_de_dados;
 
 SELECT: Consulta dados de uma tabela.
 
-exemplo:
+Exemplo:
 
 SELECT nome, email FROM clientes WHERE id = 1;
 SELECT * FROM clientes; -- Seleciona todas as colunas
 
 INSERT: Insere novos dados em uma tabela.
 
-exemplo:
+Exemplo:
 
 INSERT INTO nome_da_tabela (coluna1, coluna2, ...) VALUES (valor1, valor2, ...);
 
@@ -55,7 +59,7 @@ INSERT INTO clientes (nome, email) VALUES ('joão da silva' , 'joão@email.com')
 
 UPDATE: Atualiza dados existentes em uma tabela.
 
-exemplo:
+Exemplo:
 
 UPDATE nome_da_tabela SET coluna1 = novo_valor, coluna2 = novo_valor WHERE condição;
 
@@ -63,28 +67,28 @@ UPDATE clientes SET email = 'novo_email@email.com' WHERE id =1;
 
 DELETE: Remove dados de uma tabela.
 
-exemplo:
+Exemplo:
 
 DELETE FROM nome_da_tabela WHERE condição;
 
 DELETE FROM cliente WHERE id = 1;
 
-Comandos de controle de transação (TCL): Usados para gerenciar transações.
+## Comandos de controle de transação (TCL): Usados para gerenciar transações.
 
 BEGIN:      Inicia uma transação
 COMMIT:     Salva as alterações feitas durante a transação
 ROLLBACK:   Desfaz as alterações feitas durante a transação
 
-Cláusulas importantes:
+## CLÁUSULAS IMPORTANTES:
 
 WHERE:      Filtra os resultados de uma consulta.
 ORDER BY    Ordena os resultados de uma consulta.
 GROUP BY:   Agrupa os resultados de uma consulta.
 JOIN:       Combina dados de duas ou mais tabelas.
 LIMIT       Limita o número de resultados retornados.
-OFFSET      ignora um certo número de resultados.
+OFFSET:      ignora um certo número de resultados.
 
-exemplo:
+Exemplo:
 
 SELECT com WHERE e ORDER BY:
 
